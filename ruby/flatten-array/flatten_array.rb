@@ -1,5 +1,5 @@
 class FlattenArray
   def self.flatten(array)
-    #code
+    array.flatten.compact
   end
 end
