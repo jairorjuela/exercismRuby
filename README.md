@@ -1,3 +1,3 @@
 #Ruby exercises
 
-A repo with exercises for practice Ruby 
+A repo with exercises for practice Ruby
