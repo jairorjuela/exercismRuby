@@ -8,6 +8,10 @@ class HighScores
   end
 
   def latest
-    @scores[-1g]
+    @scores[-1]
+  end
+
+  def personal_best
+    @scores.sort[-1]
   end
 end
