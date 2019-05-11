@@ -8,14 +8,15 @@ class HighScores
   end
 
   def latest
-    @scores[-1]
+    @scores.last
   end
 
   def personal_best
-    @scores.sort[-1]
+    @scores.sort.last
   end
 
   def personal_top_three
-    @scores.sort.reverse[0..2]
+    top = @scores.sort
+    top.last(3).reverse
   end
 end
