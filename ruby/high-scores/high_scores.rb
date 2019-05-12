@@ -12,7 +12,7 @@ class HighScores
   end
 
   def personal_best
-    @scores.sort.last
+    @scores.max
   end
 
   def personal_top_three
