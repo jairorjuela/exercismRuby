@@ -16,7 +16,6 @@ class HighScores
   end
 
   def personal_top_three
-    top = @scores.sort
-    top.last(3).reverse
+    @scores.max(3)
   end
 end
