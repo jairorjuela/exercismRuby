@@ -4,14 +4,14 @@ require_relative 'pangram'
 # Common test data version: 1.4.1 2c020bc
 class PangramTest < Minitest::Test
   def test_sentence_empty
-    # skip
+    #skip
     sentence = ''
     result = Pangram.pangram?(sentence)
     refute result, "Expected false, got: #{result.inspect}. #{sentence.inspect} is NOT a pangram"
   end
 
   def test_recognizes_a_perfect_lower_case_pangram
-    skip
+    #skip
     sentence = 'abcdefghijklmnopqrstuvwxyz'
     result = Pangram.pangram?(sentence)
     assert result, "Expected true, got: #{result.inspect}. #{sentence.inspect} IS a pangram"
