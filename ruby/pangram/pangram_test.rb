@@ -11,21 +11,21 @@ class PangramTest < Minitest::Test
   end
 
   def test_recognizes_a_perfect_lower_case_pangram
-    skip
+    #skip
     sentence = 'abcdefghijklmnopqrstuvwxyz'
     result = Pangram.pangram?(sentence)
     assert result, "Expected true, got: #{result.inspect}. #{sentence.inspect} IS a pangram"
   end
 
   def test_pangram_with_only_lower_case
-    skip
+    #skip
     sentence = 'the quick brown fox jumps over the lazy dog'
     result = Pangram.pangram?(sentence)
     assert result, "Expected true, got: #{result.inspect}. #{sentence.inspect} IS a pangram"
   end
 
   def test_missing_character_x
-    skip
+    #skip
     sentence = 'a quick movement of the enemy will jeopardize five gunboats'
     result = Pangram.pangram?(sentence)
     refute result, "Expected false, got: #{result.inspect}. #{sentence.inspect} is NOT a pangram"
