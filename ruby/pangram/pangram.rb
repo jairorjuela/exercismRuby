@@ -9,7 +9,11 @@ class Pangram
         false
       else
         true
-      end 
+      end
     end
   end
 end
+
+sentence = ''
+result = Pangram.pangram?(sentence)
+p result
