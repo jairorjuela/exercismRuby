@@ -4,6 +4,11 @@ class Matrix
   end
 
   def rows
-    @matrix
+    i = 0
+    count = @matrix.split("\n").length
+    while i < count do
+      count[i].split
+      i += 1
+    end
   end
 end
