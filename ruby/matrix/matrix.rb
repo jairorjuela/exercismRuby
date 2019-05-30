@@ -1,5 +1,9 @@
 class Matrix
-  def initialize(holi)
-    #code
+  def initialize(matrix)
+    @matrix = matrix
+  end
+
+  def rows
+    @matrix
   end
 end
