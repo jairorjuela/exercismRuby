@@ -13,4 +13,9 @@ class SpaceAge
     mercury = @year_earth * 0.2408467
     age_mercury = @age / mercury
   end
+
+  def on_venus
+    venus = @year_earth * 0.61519726
+    age_venus = @age / venus
+  end
 end
