@@ -33,4 +33,9 @@ class SpaceAge
     saturn = @year_earth * 29.447498
     age_saturn = @age / saturn
   end
+
+  def on_uranus
+    uranus = @year_earth * 84.016846
+    age_uranus = @age / uranus
+  end
 end
