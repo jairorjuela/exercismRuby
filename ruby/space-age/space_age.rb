@@ -1,46 +1,72 @@
 class SpaceAge
+
   def initialize(age)
     @age = age
-    @year_earth = 31557600
+    @year_earth = 31557600.0
   end
 
-  def on_earth
-    earth = @age.to_f / @year_earth
-    earth.round(2)
+  ORBITAL_PERIODS = {
+    earth: 1,
+    mercury: 0.2408467,
+    venus: 0.61519726,
+    mars: 1.8808158,
+    jupiter: 11.862615,
+    saturn: 29.447498,
+    uranus: 84.016846,
+    neptune: 164.79132
+  }
+
+  ORBITAL_PERIODS.each do |method, period|
+    define_method "on_#{method}" do
+      @age / (@year_earth * period)
+    end
   end
 
-  def on_mercury
-    mercury = @year_earth * 0.2408467
-    age_mercury = @age / mercury
-  end
-
-  def on_venus
-    venus = @year_earth * 0.61519726
-    age_venus = @age / venus
-  end
-
-  def on_mars
-    mars = @year_earth * 1.8808158
-    age_mars = @age / mars
-  end
-
-  def on_jupiter
-    jupiter = @year_earth * 11.862615
-    age_jupiter = @age / jupiter
-  end
-
-  def on_saturn
-    saturn = @year_earth * 29.447498
-    age_saturn = @age / saturn
-  end
-
-  def on_uranus
-    uranus = @year_earth * 84.016846
-    age_uranus = @age / uranus
-  end
-
-  def on_neptune
-    neptune = @year_earth * 164.79132
-    age_neptune = @age / neptune
-  end
 end
+
+# class SpaceAge
+#   def initialize(age)
+#     @age = age
+#     @year_earth = 31557600
+#   end
+#
+#   def on_earth
+#     earth = @age.to_f / @year_earth
+#     earth.round(2)
+#   end
+#
+#   def on_mercury
+#     mercury = @year_earth * 0.2408467
+#     age_mercury = @age / mercury
+#   end
+#
+#   def on_venus
+#     venus = @year_earth * 0.61519726
+#     age_venus = @age / venus
+#   end
+#
+#   def on_mars
+#     mars = @year_earth * 1.8808158
+#     age_mars = @age / mars
+#   end
+#
+#   def on_jupiter
+#     jupiter = @year_earth * 11.862615
+#     age_jupiter = @age / jupiter
+#   end
+#
+#   def on_saturn
+#     saturn = @year_earth * 29.447498
+#     age_saturn = @age / saturn
+#   end
+#
+#   def on_uranus
+#     uranus = @year_earth * 84.016846
+#     age_uranus = @age / uranus
+#   end
+#
+#   def on_neptune
+#     neptune = @year_earth * 164.79132
+#     age_neptune = @age / neptune
+#   end
+# end
