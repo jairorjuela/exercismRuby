@@ -23,4 +23,9 @@ class SpaceAge
     mars = @year_earth * 1.8808158
     age_mars = @age / mars
   end
+
+  def on_jupiter
+    jupiter = @year_earth * 11.862615
+    age_jupiter = @age / jupiter
+  end
 end

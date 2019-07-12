@@ -1,4 +1,3 @@
-
 require 'minitest/autorun'
 require_relative 'space_age'
 
@@ -34,7 +33,7 @@ class SpaceAgeTest < Minitest::Test
   end
 
   def test_age_on_jupiter
-    skip
+    #skip
     age = SpaceAge.new(901_876_382)
     assert_in_delta 2.41, age.on_jupiter, DELTA
   end
