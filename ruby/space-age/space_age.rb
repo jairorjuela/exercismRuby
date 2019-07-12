@@ -28,4 +28,9 @@ class SpaceAge
     jupiter = @year_earth * 11.862615
     age_jupiter = @age / jupiter
   end
+
+  def on_saturn
+    saturn = @year_earth * 29.447498
+    age_saturn = @age / saturn
+  end
 end
