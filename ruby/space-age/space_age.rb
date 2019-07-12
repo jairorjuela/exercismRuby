@@ -18,4 +18,9 @@ class SpaceAge
     venus = @year_earth * 0.61519726
     age_venus = @age / venus
   end
+
+  def on_mars
+    mars = @year_earth * 1.8808158
+    age_mars = @age / mars
+  end
 end
