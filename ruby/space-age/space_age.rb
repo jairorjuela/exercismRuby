@@ -38,4 +38,9 @@ class SpaceAge
     uranus = @year_earth * 84.016846
     age_uranus = @age / uranus
   end
+
+  def on_neptune
+    neptune = @year_earth * 164.79132
+    age_neptune = @age / neptune
+  end
 end
